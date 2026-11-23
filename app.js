@@ -47,10 +47,12 @@
   if(f)f.addEventListener('submit',function(e){e.preventDefault();var i=f.querySelector('.info-pokaz');if(i)i.classList.add('widac');});
 
   // zgody
-  var z=document.querySelector('.zgody'),k='bestpm-zgody',v=null;
-  try{v=localStorage.getItem(k);}catch(e){}
-  if(z&&!v){z.classList.add('widac');
-    z.querySelectorAll('button').forEach(function(x){x.addEventListener('click',function(){try{localStorage.setItem(k,x.dataset.z);}catch(e){}z.classList.remove('widac');});});}
+  var z=document.querySelector('.zgody'),k='bestpm-zgody';
+  if(z)z.querySelectorAll('button').forEach(function(x){x.addEventListener('click',function(){try{localStorage.setItem(k,x.dataset.z);}catch(e){}z.hidden=true;});});
+
+  // mapa Google dopiero po kliknieciu
+  var mp=document.querySelector('.mapa[data-mapa]');
+  if(mp){var mb=mp.querySelector('button');if(mb)mb.addEventListener('click',function(){var f=document.createElement('iframe');f.src=mp.dataset.mapa;f.title='Mapa: ul. Ptasi Raj 3, Warszawa';f.referrerPolicy='no-referrer-when-downgrade';mp.innerHTML='';mp.appendChild(f);});}
 
   var r=document.querySelectorAll('[data-rok]');r.forEach(function(x){x.textContent=new Date().getFullYear();});
 })();
