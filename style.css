@@ -281,5 +281,7 @@ body{font-size:16.5px}
 .zgody{left:10px;right:10px;bottom:10px;max-width:none}
 .na-zyczenie{padding:24px 20px}
 .k-tekst{padding:22px 20px 24px}
+.k-foto.zaw{background:var(--navy)}
+.k-foto.zaw img{object-fit:contain}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
