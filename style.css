@@ -288,7 +288,7 @@ body{font-size:16.5px}
 /* pierwszy ekran: baner firmowy */
 .hero-baner{background:var(--navy-d);color:#fff}
 .baner{line-height:0;background:#cfe3f7}
-.baner img{width:100%;height:auto;max-height:max(380px,calc(100svh - var(--hh) - 290px));object-fit:cover;object-position:50% 40%}
+.baner img{display:block;width:100%;height:auto;aspect-ratio:2056/765}
 .hero-pas{background:linear-gradient(90deg,#081F33 0%,#0C2B46 48%,#1A5A96 100%)}
 .hp-siatka{display:grid;grid-template-columns:1.4fr 1fr;gap:28px 56px;align-items:end;padding:56px 0 58px}
 .hp-lewa h1{color:#fff;margin:0;font-size:clamp(30px,3.1vw,50px);max-width:15em}
